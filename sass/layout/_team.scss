@@ -1,0 +1,103 @@
+.team {
+    background-color: var(--light-grey);
+    padding-top: 60px;
+    padding-bottom: 30px;
+    @include desctop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
+}
+
+.team__title--first {
+    margin-bottom: 30px;
+    font-size: 28px;
+    @include desctop{
+    margin-bottom: 50px;
+        font-size: 36px;   
+    }
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.portfolio__card {
+   width: calc(100% - 2 * 15px);
+   margin-left: 15px;
+   margin-right: 15px;
+    margin-bottom: 30px;
+    background-color: var(--primery-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @include tablet {
+        width: calc((100% - 4 * 15px) / 2);
+    }
+    @include desctop {
+        width: calc((100% - 8 * 15px) / 4);
+        margin-bottom: 0px;
+    }  
+}
+.portfolio__card picture{
+    width: 100%;
+}
+
+.portfolio__text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team__title {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.team__text {
+    color: var(--primery-text-color);
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+}
+
+.link__soc {
+    display: flex;
+    height: 44px;
+    width: 44px;
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.link__hover {
+    @extend %flex-align;
+    justify-content: center;
+    border-radius: 50px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        fill: var(--primery-white-color);
+    }
+}
+
+
+
+
